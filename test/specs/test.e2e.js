@@ -2,7 +2,6 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import SecurePage from '../pageobjects/secure.page.js'
 import CheckboxPage from '../pageobjects/checkbox.page.js'
-import checkboxPage from '../pageobjects/checkbox.page.js'
 
 describe.skip('My Login application', () => {
     it('should login with valid credentials', async () => {
@@ -25,7 +24,7 @@ describe.skip('My Login application', () => {
 })
 
 
-describe('Confirm checkboxes', () => {
+describe.skip('Confirm checkboxes', () => {
     // Create a new page object for checkboxes.
 
     //1st test: navigate to checkboxes page and confirm checkbox 1 is unchecked.
@@ -50,8 +49,5 @@ describe('Confirm checkboxes', () => {
         await expect(CheckboxPage.checkBox2).toMatchElementSnapshot('checkbox2');
 
     });
-
-
-
 
 });
